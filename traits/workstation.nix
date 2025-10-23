@@ -11,7 +11,7 @@
       gnome-photos
       gnome-tour
     ]) ++ (with pkgs.gnome; [
-      cheese # webcam tool
+
       gedit # text editor
       gnome-characters
       gnome-contacts
@@ -42,6 +42,7 @@
       virt-manager
       gnome.gnome-tweaks
       gnome.gnome-characters
+      cheese # webcam tool
   ];
  };
 }
