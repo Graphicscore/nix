@@ -28,7 +28,8 @@
 					./users/asteria/home.nix
 				];
 			};
-		}
+		};
+		
 		nixosConfigurations = { 
 			stardust = nixpkgs.lib.nixosSystem {
 				modules = [
