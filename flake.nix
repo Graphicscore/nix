@@ -33,6 +33,7 @@
 						home-manager.nixosModules.home-manager
 						traits.base
 						traits.workstation
+						users.asteria
 					];
 				};
 		};
