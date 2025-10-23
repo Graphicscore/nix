@@ -4,7 +4,7 @@
  config = {
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.autoLogin.enable = false;
+  services.displayManager.autoLogin.enable = false;
   services.xserver.desktopManager.gnome.enable = true;
 
   environment.gnome.excludePackages = (with pkgs; [
@@ -22,8 +22,8 @@
   hardware.steam-hardware.enable = true;
 
   fonts.fontconfig.enable = true;
-  fonts.enableDefaultFonts = true;
-  fonts.fonts = with pkgs; [
+  fonts.enableDefaultPackages = true;
+  fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-emoji
