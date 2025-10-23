@@ -20,9 +20,17 @@
     lm_sensors
     pciutils
     usbutils
+    firefox
+    openrgb
+    spotify
+    kitty
+    vencord
+    obs-studio
   ];
 
   home.stateVersion = "25.05";
+
+  programs.steam.enable = true;
 
   programs.git = {
     enable = true;
@@ -32,5 +40,31 @@
 
   programs.docker-cli = {
     enable = true;
+  };
+
+  config = {
+    environment.systemPackages = with pkgs; [
+      jetbrains.clion
+      jetbrains.datagrip
+      jetbrains.pycharm
+      jetbrains.intellij
+      wineWowPackages.staging
+      wineWowPackages.waylandFull
+      wineWowPackages.fonts
+      winetricks
+      mono
+    ];
+
+    hardware.opengl.driSupport32Bit = true;
+
+    environment.variables = {
+      WINEDEBUG = "-all";
+      WINEESYNC = "1";
+    };
+
+    # CLion requires cargo-xlib.
+    environment.noXlibs = lib.mkForce false;
+
+    nixpkgs.config.allowUnfree = true;
   };
   }
