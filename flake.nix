@@ -32,6 +32,7 @@
 						./configuration.nix
 						home-manager.nixosModules.home-manager
 						traits.base
+						traits.workstation
 					];
 				};
 		};
@@ -42,6 +43,7 @@
 
         traits.base = ./traits/base.nix;
         traits.gaming = ./traits/gaming.nix;
+				traits.workstation = ./traits/workstation.nix;
     
         users.asteria = ./users/asteria/system.nix;
     };
