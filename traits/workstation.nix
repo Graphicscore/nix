@@ -43,5 +43,5 @@
       gnome.gnome-tweaks
       gnome.gnome-characters
   ];
- 
+ }
 }
