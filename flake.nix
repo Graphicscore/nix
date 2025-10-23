@@ -10,15 +10,31 @@
 	};
 
 	outputs = inputs@{ nixpkgs, home-manager, ... }: {
+
+		nixosModules = {
+				platforms.stardust = ./platforms/stardust.nix; #desktop pc
+				platforms.polaris = ./platforms/polaris.nix; #framework 13
+
+        traits.base = ./traits/base.nix;
+        traits.gaming = ./traits/gaming.nix;
+    
+        users.asteria = ./users/asteria/system.nix;
+    };
+
+		homeConfigurations = {
+			asteria = home-manager.lib.homeManagerConfiguration {
+				inherit pkgs;
+				modules = [
+					./users/asteria/home.nix
+				];
+			};
+		}
 		nixosConfigurations = { 
 			stardust = nixpkgs.lib.nixosSystem {
 				modules = [
 					./configuration.nix
-					home-manager.nixosModules.home-manager {
-						home-manager.useGlobalPkgs = true;
-						home-manager.useUserPackages = true;
-						home-manager.users.asteria = import ./users/asteria.nix;
-					}
+					home-manager.nixosModules.home-manager
+					traits.base
 				];
 			};
 		};
