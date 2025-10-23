@@ -36,8 +36,8 @@
   services.printing.enable = true;
   environment.systemPackages = with pkgs; [
       virt-manager
-      gnome.gnome-tweaks
-      gnome.gnome-characters
+      gnome-tweaks
+      gnome-characters
       cheese # webcam tool
   ];
  };
