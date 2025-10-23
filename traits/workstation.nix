@@ -19,7 +19,6 @@
   programs.dconf.enable = true;
   services.dbus.packages = with pkgs; [ dconf ];
 
-  hardware.opengl.driSupport = true;
   hardware.steam-hardware.enable = true;
 
   fonts.fontconfig.enable = true;
