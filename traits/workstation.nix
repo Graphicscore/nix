@@ -56,9 +56,6 @@
     WINEESYNC = "1";
   };
 
-  # CLion requires cargo-xlib.
-  environment.noXlibs = lib.mkForce false;
-
   nixpkgs.config.allowUnfree = true;
   
   programs.steam.enable = true;
