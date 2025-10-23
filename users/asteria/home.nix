@@ -4,6 +4,10 @@
   home.username = "asteria";
   home.homeDirectory = "/home/asteria";
 
+  gtk = {
+    enable = true;
+   }
+
   home.packages = with pkgs; [
     neofetch
     nnn
@@ -26,6 +30,12 @@
     kitty
     vencord
     obs-studio
+    gnomeExtensions.user-themes
+    gnomeExtensions.tray-icons-reloaded
+    gnomeExtensions.vitals
+    gnomeExtensions.dash-to-panel
+    gnomeExtensions.sound-output-device-chooser
+    gnomeExtensions.space-bar
   ];
 
   home.stateVersion = "25.05";
