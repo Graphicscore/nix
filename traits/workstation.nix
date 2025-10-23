@@ -23,7 +23,7 @@
   fonts.fontconfig.enable = true;
   fonts.enableDefaultPackages = true;
   fonts.packages = with pkgs; [
-    jetbrains-mono
+    #jetbrains-mono
   ];
 
   systemd.services.spotifyd.enable = true;
@@ -33,7 +33,15 @@
       gnome-tweaks
       gnome-characters
       cheese # webcam tool
-      
+      #jetbrains.clion
+      #jetbrains.datagrip
+      #jetbrains.pycharm
+      #jetbrains.intellij
+      #wineWowPackages.staging
+      #wineWowPackages.waylandFull
+      #wineWowPackages.fonts
+      #winetricks
+      #mono
   ];
 
   hardware.opengl.driSupport32Bit = true;
