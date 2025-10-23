@@ -9,7 +9,7 @@
 		};
 	};
 
-	outputs = inputs@{ nixpkgs, home-manager, ... }: {
+	outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
 
 		homeConfigurations =
 			let
