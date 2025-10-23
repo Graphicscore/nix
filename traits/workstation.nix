@@ -11,8 +11,6 @@
       gnome-photos
       gnome-tour
     ]) ++ (with pkgs.gnome; [
-
-      gedit # text editor
       gnome-characters
       gnome-contacts
       gnome-initial-setup
