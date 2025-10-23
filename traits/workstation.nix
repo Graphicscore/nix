@@ -29,7 +29,7 @@
   systemd.services.spotifyd.enable = true;
   services.printing.enable = true;
   environment.systemPackages = with pkgs; [
-      virt-manager
+      #virt-manager
       gnome-tweaks
       gnome-characters
       cheese # webcam tool
