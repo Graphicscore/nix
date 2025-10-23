@@ -4,9 +4,6 @@
   home.username = "asteria";
   home.homeDirectory = "/home/asteria";
 
-  gtk = {
-    enable = true;
-  };
 
   home.packages = with pkgs; [
     neofetch
@@ -53,6 +50,11 @@
   };
 
   config = {
+    
+    gtk = {
+      enable = true;
+    };
+
     environment.systemPackages = with pkgs; [
       jetbrains.clion
       jetbrains.datagrip
