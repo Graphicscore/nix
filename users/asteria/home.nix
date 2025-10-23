@@ -40,8 +40,6 @@
 
   home.stateVersion = "25.05";
 
-  programs.steam.enable = true;
-
   programs.git = {
     enable = true;
     userName = "Asteria Louven";

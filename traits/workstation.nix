@@ -60,6 +60,7 @@
   environment.noXlibs = lib.mkForce false;
 
   nixpkgs.config.allowUnfree = true;
-
+  
+  programs.steam.enable = true;
  };
 }
