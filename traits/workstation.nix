@@ -33,15 +33,7 @@
       gnome-tweaks
       gnome-characters
       cheese # webcam tool
-      jetbrains.clion
-      jetbrains.datagrip
-      jetbrains.pycharm
-      jetbrains.intellij
-      wineWowPackages.staging
-      wineWowPackages.waylandFull
-      wineWowPackages.fonts
-      winetricks
-      mono
+      
   ];
 
   hardware.opengl.driSupport32Bit = true;
