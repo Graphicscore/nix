@@ -10,7 +10,6 @@
   environment.gnome.excludePackages = (with pkgs; [
       gnome-photos
       gnome-tour
-    ]) ++ (with pkgs.gnome; [
       gnome-characters
       gnome-contacts
       gnome-initial-setup
