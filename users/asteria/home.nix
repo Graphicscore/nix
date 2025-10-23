@@ -6,7 +6,7 @@
 
   gtk = {
     enable = true;
-   }
+  };
 
   home.packages = with pkgs; [
     neofetch
