@@ -21,15 +21,21 @@
         users.asteria = ./users/asteria/system.nix;
     };
 
-		homeConfigurations = {
-			asteria = home-manager.lib.homeManagerConfiguration {
-				inherit pkgs;
-				modules = [
-					./users/asteria/home.nix
-				];
+		homeConfigurations =
+			let
+            pkgs = import nixpkgs {
+            };
+      in
+			{
+				asteria = home-manager.lib.homeManagerConfiguration {
+					inherit pkgs;
+					modules = [
+						./users/asteria/home.nix
+					];
+				};
 			};
-		};
-		
+
+
 		nixosConfigurations = { 
 			stardust = nixpkgs.lib.nixosSystem {
 				modules = [
