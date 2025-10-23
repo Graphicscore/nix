@@ -23,12 +23,7 @@
   fonts.fontconfig.enable = true;
   fonts.enableDefaultPackages = true;
   fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-emoji
     jetbrains-mono
-    fira-code
-    fira-code-symbols
   ];
 
   systemd.services.spotifyd.enable = true;
