@@ -4,7 +4,6 @@
  config = {
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
-  services.displayManager.autoLogin.enable = false;
   services.xserver.desktopManager.gnome.enable = true;
 
   environment.gnome.excludePackages = (with pkgs; [
