@@ -26,14 +26,14 @@
 			};
 
 
-		nixosConfigurations = { 
-			stardust = nixpkgs.lib.nixosSystem {
-				modules = [
-					./configuration.nix
-					home-manager.nixosModules.home-manager
-					traits.base
-				];
-			};
+		nixosConfigurations = with self.nixosModules; { 
+				stardust = nixpkgs.lib.nixosSystem {
+					modules = [
+						./configuration.nix
+						home-manager.nixosModules.home-manager
+						traits.base
+					];
+				};
 		};
 
 		nixosModules = {
