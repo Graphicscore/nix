@@ -38,6 +38,28 @@
       gnome-tweaks
       gnome-characters
       cheese # webcam tool
+      jetbrains.clion
+      jetbrains.datagrip
+      jetbrains.pycharm
+      jetbrains.intellij
+      wineWowPackages.staging
+      wineWowPackages.waylandFull
+      wineWowPackages.fonts
+      winetricks
+      mono
   ];
+
+  hardware.opengl.driSupport32Bit = true;
+
+  environment.variables = {
+    WINEDEBUG = "-all";
+    WINEESYNC = "1";
+  };
+
+  # CLion requires cargo-xlib.
+  environment.noXlibs = lib.mkForce false;
+
+  nixpkgs.config.allowUnfree = true;
+
  };
 }
