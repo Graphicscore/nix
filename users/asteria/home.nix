@@ -15,7 +15,7 @@
     file
     tree
     which
-    #nix-output-monitor
+    nix-output-monitor
     glow
     btop
     lsof
@@ -23,18 +23,18 @@
     lm_sensors
     pciutils
     usbutils
-    #firefox
+    firefox
     #openrgb
-    #spotify
-    #kitty
-    #vencord
-    #obs-studio
-    #gnomeExtensions.user-themes
-    #gnomeExtensions.tray-icons-reloaded
-    #gnomeExtensions.vitals
-    #gnomeExtensions.dash-to-panel
-    #gnomeExtensions.sound-output-device-chooser
-    #gnomeExtensions.space-bar
+    spotify
+    kitty
+    vencord
+    obs-studio
+    gnomeExtensions.user-themes
+    gnomeExtensions.tray-icons-reloaded
+    gnomeExtensions.vitals
+    gnomeExtensions.dash-to-panel
+    gnomeExtensions.sound-output-device-chooser
+    gnomeExtensions.space-bar
   ];
 
   home.stateVersion = "25.05";
