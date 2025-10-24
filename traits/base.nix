@@ -20,13 +20,13 @@
       smartmontools
       simple-http-server
     ];
-    environment.shellAliases = { };
-    environment.variables = {
-    
-    };
-    environment.pathsToLink = [
-      "/share/nix-direnv"
-    ];
+    #environment.shellAliases = { };
+    #environment.variables = {
+    #
+    #};
+    #environment.pathsToLink = [
+    #  "/share/nix-direnv"
+    #];
 
    
     programs.bash.loginShellInit = ''
@@ -37,15 +37,15 @@
       fi
     '';
 
-    security.sudo.wheelNeedsPassword = false;
-    security.sudo.extraConfig = ''
-      Defaults lecture = never
-    '';
+    #security.sudo.wheelNeedsPassword = false;
+    #security.sudo.extraConfig = ''
+    #  Defaults lecture = never
+    #'';
 
     # Use edge NixOS.
-    nix.extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
+    #nix.extraOptions = ''
+    #  experimental-features = nix-command flakes
+    #'';
     #nix.package = pkgs;
 
     home-manager.useGlobalPkgs = true;
