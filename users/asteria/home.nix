@@ -46,7 +46,7 @@
     userEmail = "asteria@louven.me";
   };
 
-  programs.docker-cli = {
-    enable = true;
-  };
+  #programs.docker-cli = {
+  #  enable = true;
+  #};
   }
