@@ -27,9 +27,9 @@
     firefox
     openrgb
     spotify
-    kitty
-    vencord
-    obs-studio
+    #kitty
+    #vencord
+    #obs-studio
     #gnomeExtensions.user-themes
     #gnomeExtensions.tray-icons-reloaded
     #gnomeExtensions.vitals
