@@ -37,15 +37,15 @@
       fi
     '';
 
-    #security.sudo.wheelNeedsPassword = false;
+    security.sudo.wheelNeedsPassword = false;
     #security.sudo.extraConfig = ''
     #  Defaults lecture = never
     #'';
 
     # Use edge NixOS.
-    #nix.extraOptions = ''
-    #  experimental-features = nix-command flakes
-    #'';
+    nix.extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
     #nix.package = pkgs;
 
     home-manager.useGlobalPkgs = true;

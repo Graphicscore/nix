@@ -44,7 +44,7 @@
       #mono
   ];
 
-  hardware.opengl.driSupport32Bit = true;
+  hardware.opengl.enable32Bit = true;
 
   environment.variables = {
     WINEDEBUG = "-all";
