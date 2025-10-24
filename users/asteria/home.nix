@@ -26,7 +26,7 @@
     #firefox
     openrgb
     #spotify
-    kitty
+    #kitty
     #vencord
     #obs-studio
     #gnomeExtensions.user-themes
