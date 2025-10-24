@@ -3,8 +3,6 @@
 {
   config = {
     time.timeZone = "Europe/Berlin";
-    
-
     i18n.defaultLocale = "de_DE.UTF-8";
 
     environment.systemPackages = with pkgs; [
@@ -48,7 +46,7 @@
     nix.extraOptions = ''
       experimental-features = nix-command flakes
     '';
-    nix.package = pkgs;
+    #nix.package = pkgs;
 
     home-manager.useGlobalPkgs = true;
     home-manager.useUserPackages = true;
