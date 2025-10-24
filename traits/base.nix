@@ -19,6 +19,9 @@
       fio
       smartmontools
       simple-http-server
+      curl
+      wget
+      grep
     ];
     #environment.shellAliases = { };
     #environment.variables = {
