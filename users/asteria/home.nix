@@ -25,7 +25,7 @@
     usbutils
     #firefox
     openrgb
-    spotify
+    #spotify
     kitty
     #vencord
     #obs-studio
