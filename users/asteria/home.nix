@@ -4,9 +4,9 @@
   home.username = "asteria";
   home.homeDirectory = "/home/asteria";
 
-  gtk = {
-    enable = true;
-  };
+ # gtk = {
+ #   enable = true;
+ # };
 
   home.packages = with pkgs; [
     neofetch
