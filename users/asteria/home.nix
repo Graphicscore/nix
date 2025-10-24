@@ -10,18 +10,17 @@
 
   home.packages = with pkgs; [
     neofetch
-    #nnn
-    #zip
-    #unzip
-    #file
-    #tree
-    #which
+    zip
+    unzip
+    file
+    tree
+    which
     #nix-output-monitor
-    #glow
-    #btop
-    #lsof
-    #ltrace
-    #lm_sensors
+    glow
+    btop
+    lsof
+    ltrace
+    lm_sensors
     #pciutils
     #usbutils
     #firefox
