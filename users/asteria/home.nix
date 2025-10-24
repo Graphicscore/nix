@@ -24,7 +24,7 @@
     pciutils
     usbutils
     #firefox
-    openrgb
+    #openrgb
     #spotify
     #kitty
     #vencord
