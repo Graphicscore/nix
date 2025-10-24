@@ -21,12 +21,12 @@
     lsof
     ltrace
     lm_sensors
-    #pciutils
-    #usbutils
+    pciutils
+    usbutils
     #firefox
-    #openrgb
-    #spotify
-    #kitty
+    openrgb
+    spotify
+    kitty
     #vencord
     #obs-studio
     #gnomeExtensions.user-themes
