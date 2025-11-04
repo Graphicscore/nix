@@ -8,7 +8,7 @@
     ../stardust/stardust.nix 
     ];
 
-  networking.hostName = "stardust-emu";
+  networking.hostName = lib.mkForce "stardust-emu";
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ohci_pci" "ehci_pci" "virtio_pci" "ahci" "usbhid" "sr_mod" "virtio_blk" ];
 
