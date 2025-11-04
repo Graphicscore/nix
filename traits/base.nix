@@ -18,7 +18,7 @@
       gptfdisk
       fio
       smartmontools
-      simple-http-server
+#      simple-http-server
       curl
       wget
       grep
@@ -46,9 +46,8 @@
     #'';
 
     # Use edge NixOS.
-    nix.extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
+    
+    nix.settings.experimental-features = [ "nix-command" "flakes"];
     #nix.package = pkgs;
 
     home-manager.useGlobalPkgs = true;

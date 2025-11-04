@@ -29,12 +29,6 @@
     kitty
     vencord
     obs-studio
-    gnomeExtensions.user-themes
-    gnomeExtensions.tray-icons-reloaded
-    gnomeExtensions.vitals
-    gnomeExtensions.dash-to-panel
-    gnomeExtensions.sound-output-device-chooser
-    gnomeExtensions.space-bar
   ];
 
   home.stateVersion = "25.05";
@@ -43,6 +37,10 @@
     enable = true;
     userName = "Asteria Louven";
     userEmail = "asteria@louven.me";
+  };
+
+  programs.plasma = {
+    enable = true;
   };
 
   #programs.docker-cli = {

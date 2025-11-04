@@ -14,15 +14,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  services.openssh = {
-   enable = true;
-   ports = [ 22 ];
-   settings = {
-    PasswordAuthentication = true;
-    AllowUsers = null;
-   };
-  }; 
-
   networking.hostName = "stardust"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -30,20 +21,7 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
-  networking.networkmanager.enable = true;
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "de_DE.UTF-8";
-    LC_IDENTIFICATION = "de_DE.UTF-8";
-    LC_MEASUREMENT = "de_DE.UTF-8";
-    LC_MONETARY = "de_DE.UTF-8";
-    LC_NAME = "de_DE.UTF-8";
-    LC_NUMERIC = "de_DE.UTF-8";
-    LC_PAPER = "de_DE.UTF-8";
-    LC_TELEPHONE = "de_DE.UTF-8";
-    LC_TIME = "de_DE.UTF-8";
-  };
+  
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -54,18 +32,8 @@
   # Configure console keymap
   console.keyMap = "de";
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.asteria = {
-    isNormalUser = true;
-    description = "Asteria";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-  };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
   nix.settings.experimental-features = [ "nix-command" "flakes"];
+
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
