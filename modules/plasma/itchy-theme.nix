@@ -1,8 +1,8 @@
 {lib, stdenv, fetchgit}:
 
 {
-  itchy-theme = stdenv.mkDerivation {
-    pname = "itchy-theme";
+  stdenv.mkDerivation {
+    name = "itchy-theme";
     version = "latest";
     src = fetchgit {
       url = "https://gitlab.com/jomada/Itchy";
