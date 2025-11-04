@@ -51,8 +51,8 @@
 				platforms.polaris = ./platforms/polaris.nix; #framework 13
 
         traits.base = ./traits/base.nix;
-        traits.gaming = ./traits/gaming.nix;
-				traits.workstation = ./traits/workstation.nix;
+        #traits.gaming = ./traits/gaming.nix;
+				#traits.workstation = ./traits/workstation.nix;
 
 				traits.ssh = ./traits/ssh.nix;
 				traits.i18n = ./traits/i18n.nix;
