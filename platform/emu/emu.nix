@@ -1,8 +1,12 @@
-{ config, pkgs, lib, ... }:
+{ config, lib, pkgs, modulesPath, ... }:
+
 
 {
 
-  imports = [ ../stardust/stardust.nix ];
+  imports = [ 
+    (modulesPath + "/profiles/qemu-guest.nix")
+    ../stardust/stardust.nix 
+    ];
 
   networking.hostName = "stardust-emu";
 
@@ -24,4 +28,12 @@
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
+
+
+  swapDevices = [ ];
+
+  networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp0s9.useDHCP = lib.mkDefault true;
+
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }
