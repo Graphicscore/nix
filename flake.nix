@@ -36,6 +36,7 @@
 					home-manager.useUserPackages = true;
 					home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
 				}
+				./plasma/theme/itchy.nix
 				traits.base
 				traits.ssh
 				traits.i18n
