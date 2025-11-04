@@ -1,7 +1,7 @@
 { config, pkgs, lib,  ... }:
 
 let
-  itchy-theme = import ../modules/plasma/itchy-theme.nix;
+  itchy-theme = import ../../modules/plasma/itchy-theme.nix;
 in
 {
   home.username = "asteria";
