@@ -36,7 +36,7 @@
 							home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
 						}
 						traits.base
-						traits.workstation
+						#traits.workstation
 						traits.ssh
 						traits.i18n
 						traits.network
