@@ -54,11 +54,19 @@
 					# Add any polaris-specific modules here
 				];
 			};
+
+			stardust-emu = nixpkgs.lib.nixosSystem {
+				modules = baseModules ++ [
+					platforms.stardust-emu
+					# Add any stardust-emu-specific modules here
+				];
+			};
 		};
 
 		nixosModules = {
-				platforms.stardust = ./platform/stardust.nix; #desktop pc
-				platforms.polaris = ./platform/polaris.nix; #framework 13
+				platforms.stardust = ./platform/stardust/stardust.nix; #desktop pc
+				platforms.polaris = ./platform/polaris/polaris.nix; #framework
+				platforms.stardust-emu = ./platform/emu/emu.nix; #desktop pc
 
         traits.base = ./traits/base.nix;
         #traits.gaming = ./traits/gaming.nix;
