@@ -29,6 +29,7 @@
 			# Shared base modules that both configurations use
 			baseModules = [
 				./configuration.nix
+				./plasma/plasma.nix
 				home-manager.nixosModules.home-manager
 				{
 					home-manager.useGlobalPkgs = true;

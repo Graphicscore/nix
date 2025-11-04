@@ -23,10 +23,15 @@
     lm_sensors
     pciutils
     usbutils
+
+    ungoogled-chromium
     firefox
+    itchy-theme
     #openrgb
     spotify
     kitty
+
+    telegram-desktop
     vencord
     obs-studio
   ];
