@@ -18,7 +18,7 @@
 
 	nixpkgs.overlays = [
     (final: prev: {
-      itchy-theme = prev.callPackage ./plasma/itchy{ };
+      itchy-theme = prev.callPackage ./plasma/itchy { };
     })
   ];
 
@@ -35,14 +35,12 @@
 			# Shared base modules that both configurations use
 			baseModules = [
 				./configuration.nix
-				./plasma/plasma.nix
 				home-manager.nixosModules.home-manager
 				{
 					home-manager.useGlobalPkgs = true;
 					home-manager.useUserPackages = true;
 					home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
 				}
-				./plasma/theme/itchy.nix
 				traits.base
 				traits.ssh
 				traits.i18n
