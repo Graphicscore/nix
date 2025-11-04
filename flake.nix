@@ -16,6 +16,12 @@
 
 	outputs = inputs@{ self, nixpkgs, home-manager, plasma-manager, ... }: {
 
+	nixpkgs.overlays = [
+    (final: prev: {
+      itchy-theme = prev.callPackage ./plasma/itchy/{ };
+    })
+  ];
+
 		homeConfigurations = {
 			asteria = home-manager.lib.homeManagerConfiguration {
 				pkgs = import nixpkgs { system = "x86_64-linux"; };

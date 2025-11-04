@@ -46,6 +46,10 @@
 
   programs.plasma = {
     enable = true;
+    
+    workspace = {
+      theme = "itchy"; # This should match the theme name from the package
+    };
   };
 
   #programs.docker-cli = {
