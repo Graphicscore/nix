@@ -18,7 +18,7 @@
 
 	nixpkgs.overlays = [
     (final: prev: {
-      itchy-theme = prev.callPackage ./plasma/itchy/{ };
+      itchy-theme = prev.callPackage ./plasma/itchy{ };
     })
   ];
 
