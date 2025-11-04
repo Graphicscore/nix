@@ -21,7 +21,7 @@
 #      simple-http-server
       curl
       wget
-      grep
+#      grep
     ];
     #environment.shellAliases = { };
     #environment.variables = {
