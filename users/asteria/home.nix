@@ -1,5 +1,8 @@
 { config, pkgs, lib,  ... }:
 
+let
+  itchy-theme = import ../modules/plasma/itchy-theme.nix;
+in
 {
   home.username = "asteria";
   home.homeDirectory = "/home/asteria";
