@@ -47,8 +47,8 @@
 		};
 
 		nixosModules = {
-				platforms.stardust = ./platforms/stardust.nix; #desktop pc
-				platforms.polaris = ./platforms/polaris.nix; #framework 13
+				platforms.stardust = ./platform/stardust.nix; #desktop pc
+				platforms.polaris = ./platform/polaris.nix; #framework 13
 
         traits.base = ./traits/base.nix;
         #traits.gaming = ./traits/gaming.nix;
