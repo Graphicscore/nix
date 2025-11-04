@@ -25,25 +25,35 @@
 			};
 		};
 
-		nixosConfigurations = with self.nixosModules; { 
-				stardust = nixpkgs.lib.nixosSystem {
-					modules = [
-						./configuration.nix
-						home-manager.nixosModules.home-manager
-						{
-							home-manager.useGlobalPkgs = true;
-							home-manager.useUserPackages = true;
-							home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
-						}
-						traits.base
-						#traits.workstation
-						traits.ssh
-						traits.i18n
-						traits.network
-						platforms.stardust
-						users.asteria
-					];
-				};
+		nixosConfigurations = with self.nixosModules; let
+			# Shared base modules that both configurations use
+			baseModules = [
+				./configuration.nix
+				home-manager.nixosModules.home-manager
+				{
+					home-manager.useGlobalPkgs = true;
+					home-manager.useUserPackages = true;
+					home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
+				}
+				traits.base
+				traits.ssh
+				traits.i18n
+				traits.network
+				users.asteria
+			];
+		in {
+			stardust = nixpkgs.lib.nixosSystem {
+				modules = baseModules ++ [
+					platforms.stardust
+				];
+			};
+			
+			polaris = nixpkgs.lib.nixosSystem {
+				modules = baseModules ++ [
+					platforms.polaris
+					# Add any polaris-specific modules here
+				];
+			};
 		};
 
 		nixosModules = {
