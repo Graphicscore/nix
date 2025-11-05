@@ -1,8 +1,5 @@
 { config, pkgs, lib,  ... }:
 
-let
-  itchy-theme = pkgs.callPackage ../../modules/plasma/itchy-theme.nix {};
-in
 {
   home.username = "asteria";
   home.homeDirectory = "/home/asteria";
