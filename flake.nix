@@ -29,6 +29,12 @@
 			# Shared base modules that both configurations use
 			baseModules = [
 				./configuration.nix
+				{
+					nixpkgs.overlays = [
+						(import ./overlays/plasma/itchy-theme.nix)
+					];
+    		}	
+			
 				home-manager.nixosModules.home-manager
 				{
 					home-manager.useGlobalPkgs = true;
